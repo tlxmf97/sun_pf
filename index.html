@@ -2,19 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>2026</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2026 Portfolio</title>
+    <meta name="description" content="웹디자이너 포트폴리오">
+    <meta name="keywords" content="웹디자인, 퍼블리싱, 포트폴리오">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
+    <script>
+        const portfolioData = [
+        {
+            title: "UI/UX Design",
+            filter: "filter-ui",
+            thumb: "assets/img/portfolio/portfolio08.png",
+            lightbox: "assets/img/portfolio/portfolio08.png",
+            link: "pofo08_.view.html"
+        },
+        {
+            title: "Web Design",
+            filter: "filter-web",
+            thumb: "assets/img/portfolio/portfolio01.png",
+            lightbox: "assets/img/portfolio/portfolio01.png",
+            link: "pofo01_.view.html"
+        },
+        {
+            title: "Publishing",
+            filter: "filter-publishing",
+            thumb: "assets/img/portfolio/portfolio02.png",
+            lightbox: "assets/img/portfolio/portfolio02.png",
+            link: "pofo02_.view.html"
+        }
+        ];
+    </script>
+
+
 </head>
 
 <body class="index-page">
@@ -26,11 +53,11 @@
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div class="hero-content">
                             <h1 class="ms_font_w" data-aos="fade-up" data-aos-delay="200">
-                                Hello,<br>
-                                I'm 
-                                <span class="highlight">SunYoung</span>
+                                Hello,<br>I'm <span class="highlight">SunYoung</span>
                             </h1>
-                            <h2 class="ms_font" data-aos="fade-up" data-aos-delay="300">Creative <span class="typed" data-typed-items="UI/UX Designer, Web Designer, Web Publisher, Web Developer"></span></h2>
+                            <h2 class="ms_font" data-aos="fade-up" data-aos-delay="300">Creative 
+                                <span class="typed" data-typed-items="UI/UX Designer, Web Designer, Web Publisher, Web Developer"></span>
+                            </h2>
                             <p data-aos="fade-up" data-aos-delay="400">
                                 Figma, Photoshop, Illustrator를 활용한 UI 디자인과
                                 HTML, CSS, Media Query, JavaScript 기반의 퍼블리싱이 가능하며,
@@ -58,7 +85,7 @@
                                     </div>
                                     <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
                                         <i class="bi bi-lightbulb"></i>
-                                        <span class="ms_font">Code</span>
+                                        <span class="ms_font">Developer</span>
                                     </div>
                                 </div>
                             </div>
@@ -77,8 +104,8 @@
                     <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
                         <div class="intro-content">
                             <h2 class="ms_font_w headline">Hello,<br>
-                                                        I’m Sunyoung Joo —<br>
-                                                        A <span class="font_col">Web Designer.</span></h2>
+                                I’m Sunyoung Joo —<br>
+                                A <span class="font_col">Web Designer.</span></h2>
                             <p class="lead">
                                 8년차 웹디자이너로써 다양한 프로젝트를 웹디자인과 퍼블리싱을 담당하며
                                 최적화되고 완성도 높은 결과물을 만듭니다.<br>
@@ -159,7 +186,7 @@
                     </div>
                 </div>
 
-                <!--div class="row g-4 skills-animation">
+                <div class="row g-4 skills-animation">
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                         <div class="skill-box">
                             <h3>VUE</h3>
@@ -203,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                </div-->
+                </div>
             </div>
         </section>
 
@@ -213,38 +240,20 @@
             </div>
             <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
                 <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-                        <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3"></i> All Projects</li>
-                        <li data-filter=".filter-ui"><i class="bi bi-phone"></i> UI/UX</li>
-                        <li data-filter=".filter-development"><i class="bi bi-code-slash"></i> Publishing</li>
-                        <li data-filter=".filter-photography"><i class="bi bi-camera"></i> Event Page</li>
-                        <li data-filter=".filter-marketing"><i class="bi bi-graph-up"></i> Marketing</li>
+                        <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3"></i>All Projects</li>
+                        <li data-filter=".filter-web"><i class="bi bi-phone"></i>WebDesign</li>
+                        <li data-filter=".filter-ui"><i class="bi bi-phone"></i>UI/UX</li>
+                        <li data-filter=".filter-publishing"><i class="bi bi-code-slash"></i>Publishing</li>
+                        <li data-filter=".filter-photography"><i class="bi bi-camera"></i>Event Page</li>
                     </ul>
 
-                    <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-                        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-                            <article class="portfolio-entry">
-                                <figure class="entry-image">
-                                    <img src="assets/img/portfolio/portfolio01.png" class="img-fluid" alt="" loading="lazy">
-                                    <div class="entry-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="entry-title">UI/UX Design</span></h3>
-                                            <div class="entry-links">
-                                                <a href="assets/img/portfolio/portfolio01.png" class="glightbox">
-                                                    <i class="bi bi-arrows-angle-expand"></i>
-                                                </a>
-                                                <a href="portfolio-details.html">
-                                                    <i class="bi bi-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </article>
-                        </div>
+                    <div class="row g-4 isotope-container" id="portfolioContainer" data-aos="fade-up" data-aos-delay="300">
                     </div>
+
                     <div class="btnn mt-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-                        <a href="portfolio.html" class="go_btn">View All</a>
+                        <a href="/pofo_list.html" class="go_btn">View All</a>
                     </div>
                 </div>
             </div>
@@ -333,6 +342,48 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("portfolioContainer");
+
+        portfolioData.forEach(item => {
+            container.insertAdjacentHTML("beforeend", `
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item ${item.filter}">
+                <article class="portfolio-entry">
+                <figure class="entry-image">
+                    <img src="${item.thumb}" class="img-fluid" alt="" loading="lazy">
+                    <div class="entry-overlay">
+                    <div class="overlay-content">
+                        <h3 class="entry-title">${item.title}</h3>
+                        <div class="entry-links">
+                        <a href="${item.lightbox}" class="glightbox">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="${item.link}">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                </figure>
+                </article>
+            </div>
+            `);
+        });
+
+        /* Isotope 초기화 */
+        const iso = new Isotope(container, {
+            itemSelector: '.portfolio-item',
+            layoutMode: 'masonry'
+        });
+
+        /* Lightbox 초기화 */
+        GLightbox({
+            selector: '.glightbox'
+        });
+        });
+    </script>
+
 </body>
 </html>
 
