@@ -16,64 +16,19 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <script>
-        const portfolioData = [
-            {
+        const portfolioData = [];
+
+        for (let i = 1; i <= 8; i++) {
+            const num = String(i).padStart(2, '0');
+
+            portfolioData.push({
                 title: "UI/UX Design",
                 filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio01.png",
-                lightbox: "assets/img/portfolio/portfolio01.png",
-                link: "pofo01_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio02.png",
-                lightbox: "assets/img/portfolio/portfolio02.png",
-                link: "pofo02_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio03.png",
-                lightbox: "assets/img/portfolio/portfolio03.png",
-                link: "pofo03_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio04.png",
-                lightbox: "assets/img/portfolio/portfolio04.png",
-                link: "pofo04_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio05.png",
-                lightbox: "assets/img/portfolio/portfolio05.png",
-                link: "pofo05_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio06.png",
-                lightbox: "assets/img/portfolio/portfolio06.png",
-                link: "pofo06_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio07.png",
-                lightbox: "assets/img/portfolio/portfolio07.png",
-                link: "pofo07_.view.html"
-            },
-            {
-                title: "UI/UX Design",
-                filter: "filter-ui",
-                thumb: "assets/img/portfolio/portfolio08.png",
-                lightbox: "assets/img/portfolio/portfolio08.png",
-                link: "pofo08_.view.html"
-            }
-        ];
+                thumb: `assets/img/portfolio/portfolio${num}.png`,
+                lightbox: `assets/img/portfolio/portfolio${num}.png`,
+                link: `pofo${num}_.view.html`
+            });
+        }
     </script>
 </head>
 
