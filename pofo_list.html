@@ -498,9 +498,7 @@
                         <li data-filter=".filter-publish"><i class="bi bi-code-slash"></i>Publishing</li>
                         <li data-filter=".filter-photoshop"><i class="bi bi-bezier"></i>Photoshop</li>
                     </ul>
-
                     <div class="row gy-4 isotope-container" id="portfolioContainer" data-aos="fade-up" data-aos-delay="300">
-
                     </div>
                 </div>
             </div>
@@ -540,10 +538,10 @@
                     <img src="${item.thumb}" alt="${item.title}" class="img-fluid">
                     <div class="portfolio-overlay">
                         <a href="${item.lightbox}" class="glightbox portfolio-lightbox">
-                        <i class="bi bi-plus"></i>
+                            <i class="bi bi-plus"></i>
                         </a>
                         <a href="${item.link}" class="portfolio-details-link">
-                        <i class="bi bi-link"></i>
+                            <i class="bi bi-eye"></i>
                         </a>
                     </div>
                     </div>
@@ -558,7 +556,6 @@
     </script>
 </body>
 <script>
-    // 1. Header/Footer 로드 및 초기화
 async function loadLayout() {
     try {
         const headerRes = await fetch("header.html");
@@ -569,7 +566,6 @@ async function loadLayout() {
         const footerHtml = await footerRes.text();
         document.getElementById("footer").innerHTML = footerHtml;
 
-        // 헤더가 로드된 "후"에 스크롤 및 클릭 이벤트 초기화
         initMenuFeatures();
     } catch (error) {
         console.error("Layout load error:", error);
@@ -580,7 +576,6 @@ function initMenuFeatures() {
     const navLinks = document.querySelectorAll('.navmenu a');
     const sections = document.querySelectorAll('section[id]');
 
-    // --- [기능 1] 클릭 시 즉시 active 변경 ---
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navLinks.forEach(l => l.classList.remove('current'));
@@ -588,11 +583,11 @@ function initMenuFeatures() {
         });
     });
 
-    // --- [기능 2] 스크롤 시 영역 감지 (IntersectionObserver) ---
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // 섹션의 50%가 보일 때 활성화
+        threshold: 0.5 
     };
 
     const observer = new IntersectionObserver(entries => {
@@ -601,11 +596,11 @@ function initMenuFeatures() {
             const targetLink = document.querySelector(`.navmenu a[href="#${id}"]`);
 
             if (entry.isIntersecting) {
-                // 영역에 들어오면 해당 메뉴 활성화
+
                 navLinks.forEach(l => l.classList.remove('current'));
                 if (targetLink) targetLink.classList.add('current');
             } else {
-                // 영역을 벗어나면 해당 메뉴 active 제거
+
                 if (targetLink) targetLink.classList.remove('current');
             }
         });
@@ -614,7 +609,7 @@ function initMenuFeatures() {
     sections.forEach(section => observer.observe(section));
 }
 
-// 실행
+
 loadLayout();
 </script>
 </html>

@@ -1079,14 +1079,14 @@ section,
 
 .about .intro-content .headline {
   font-family: "Pretendard";
-  line-height: 1.4;
+  line-height: 1.3;
   font-size: clamp(28px, 4vw, 44px);
   margin: 0 0 24px 0;
 }
 
 .about .intro-content .lead {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin-bottom: 24px;
   padding-right: 50px;
@@ -2527,6 +2527,35 @@ section,
   color: var(--accent-color);
 }
 
+.isotope-layout .btnn {
+  padding:100px 0 100px;
+}
+.navigation_box .navigation{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.navigation_box .navigation a{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid
+ color-mix(in srgb, var(--default-color), transparent 85%);
+    border-radius: 25px;
+    color: var(--heading-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.navigation_box .navigation a:hover{
+  background: var(--accent-color);
+  color:#fff;
+}
 .btnn {
   display: flex;
   justify-content: center;
